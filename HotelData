@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class HotelData {
+    public list<hotel> storeAllhotels()
+    {   
+        Hotel h1=new hotel(1,"crown","l1",70000);
+        Hotel h2=new hotel(2,"tej","l1",40000);
+        Hotel h3=new hotel(3,"elegance","l1",50000);
+
+
+        List<HotelData> hotels=new ArrayList<hotel>();
+        hotels.add(h1);
+        hotels.add(h2);
+        hotels.add(h3);
+        return hotels;
+ }
+
+    
+}
+public static void main( String[]args)
+{
+    HotelData data=new HotelData();
+    system.out.println("avaibale hotels are");
+    List<Hotel> list=data.storeAllHotels();
+    int price1=0;
+    for(hotel h:list){
+        System.out.println(h.getname()+""+h.getprice());
+
+    }
+        System.out.println(" Enter hotel name");
+        Scanner sc= new Scanner(System.in);
+        String h= sc.nextLine();
+        System.out.println("Enter no. of days");
+        int days=sc.nextInt();
+
+        System.out.println(" total bill=");
+        if(h.equals("crown")){
+           price1=70000;
+        }
+        else if(h.equals("tej")){
+            price2=40000;
+        }
+        else if(h.equals("elegane")){
+            price3=50000
+        }
+        System.out.println("Amount:" + days*price1);
+}
